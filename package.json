@@ -1,0 +1,56 @@
+{
+  "name": "import-guardian-mcp",
+  "version": "0.3.0",
+  "mcpName": "io.github.Baneado98/import-guardian",
+  "description": "Catch AI-hallucinated (slopsquatted) npm imports in generated code BEFORE npm install. Scans a code block, flags imports of packages that don't exist on npm (the name an LLM invented and attackers register with malware) plus fresh lookalike squats. MCP server + pay-per-call x402 API. Companion to npm-guardian.",
+  "type": "module",
+  "bin": {
+    "import-guardian": "dist/mcp.js"
+  },
+  "main": "dist/mcp.js",
+  "files": [
+    "dist/mcp.js",
+    "dist/mcpServer.js",
+    "dist/engine.js",
+    "dist/parse.js",
+    "dist/resolve.js",
+    "dist/popular.js",
+    "dist/kv.js",
+    "dist/stripeLane.js",
+    "README.md",
+    "LICENSE",
+    "server.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Baneado98/import-guardian.git"
+  },
+  "homepage": "https://import-guardian.vercel.app",
+  "bugs": {
+    "url": "https://github.com/Baneado98/import-guardian/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node dist/mcp.js",
+    "start:mcp": "node dist/mcp.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "npm",
+    "security",
+    "supply-chain",
+    "slopsquatting",
+    "typosquatting",
+    "hallucination",
+    "ai-agent",
+    "package-verification"
+  ],
+  "author": "import-guardian",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0"
+  }
+}
